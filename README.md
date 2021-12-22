@@ -1,3 +1,7 @@
+# Importante
+
+Primero se deben instalar las dependencias (npm i) y luego para correr la app npm start
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.

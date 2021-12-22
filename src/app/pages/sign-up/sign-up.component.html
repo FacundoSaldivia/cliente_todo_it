@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <div class="signup-text">
+        <h1>Registrate, es completamente <span class="higlight">gratis !</span> </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aut obcaecati eaque, aliquid deleniti quos nisi
+            fuga quidem odio et vel inventore ipsa eligendi quasi quisquam iusto optio accusantium, corporis officiis ea
+            culpa illum. Tenetur ullam ab accusamus commodi tempore aliquam aliquid, molestiae tempora asperiores. Cum
+            dolorem illum doloribus beatae optio iusto, est voluptatibus facere itaque molestiae doloremque error nemo!
+        </p>
+    </div>
+    <form action="" class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1>REGISTRO</h1>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre y apellido</mat-label>
+            <input name="fullName" formControlName="fullName" (ngModel)="user.fullName" matInput placeholder="" value=""
+                required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input name="email" formControlName="email" (ngModel)="user.email" matInput placeholder="" value=""
+                required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" name="password" formControlName="password" (ngModel)="user.password" matInput
+                placeholder="" value="" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Direccion</mat-label>
+            <input type="email" name="address" formControlName="address" (ngModel)="user.address" matInput
+                placeholder="" value="" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telefono</mat-label>
+            <input name="cellPhone" formControlName="cellPhone" matInput placeholder="" value=""
+                (ngModel)="user.cellPhone" required>
+        </mat-form-field>
+
+
+
+        <mat-card-footer>
+            <fieldset id='fieldSubmit' class="register-btns">
+                <button type="submit" [disabled]="!registerForm.valid" mat-raised-button>Registar</button>
+                <button mat-raised-button (click)='goLogin()'>Ya tengo cuenta</button>
+            </fieldset>
+        </mat-card-footer>
+
+    </form>
+
+</div>

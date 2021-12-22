@@ -1,0 +1,36 @@
+@import "../../../colors"
+.imagen 
+  margin-top: 8rem
+  position: relative
+  text-align: center
+  img 
+    width: 50%
+    opacity: 100%
+  
+
+  .title 
+    color: $accent
+    position: absolute
+    top: 3%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-family: serat
+    font-size: 5.5rem
+    letter-spacing: 0.3em
+    opacity: 1
+    border: 3px solid $accent
+    padding: 25px 15px 50px 25px // top -  right - bottom - left
+  
+
+
+@media screen and (max-width: 1024px) 
+  .imagen 
+    margin-top: 10rem
+    img 
+      width: 95%
+    
+    .title 
+      font-size: 2em
+      padding: 20px 10px 35px 10px
+    
+  

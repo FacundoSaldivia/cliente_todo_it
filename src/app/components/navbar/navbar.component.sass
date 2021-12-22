@@ -1,0 +1,93 @@
+@import "../../../_colors"
+.example-spacer 
+  flex: 1 1 auto
+
+.tool-bar
+  margin: 0
+  background: transparent
+  color: $white-ish
+  background: linear-gradient(180deg, #5a5a5a32 0%, #fdfdff00 100%)
+  .title-home 
+    background: transparent
+    color: $white-ish
+    border: none
+    font-family: serat
+    font-size: 30px
+    margin: 0 0rem 0.3rem 0.5rem
+    padding: 0
+    -webkit-transition: 0.2s all
+    -webkit-transition-delay: 0.2s
+    -moz-transition: 0.2s all
+    -moz-transition-delay: 5s
+    -ms-transition: 0.2s all
+    -ms-transition-delay: 0.2s
+    -o-transition: 0.2s all
+    -o-transition-delay: 0.2s
+    transition: 0.2s all
+    transition-delay: 0.2s
+
+  .title-home:hover 
+    color: $accent
+    cursor: pointer
+    -webkit-transition-delay: 0s
+    -moz-transition-delay: 0s
+    -ms-transition-delay: 0s
+    -o-transition-delay: 0s
+    transition-delay: 0s
+.links
+  li
+    display: inline
+    list-style: none
+  .material-icons
+    display: none
+  .material-icons
+    display: none
+          
+.btn
+  color: $white-ish
+  border: none 
+.btn:hover 
+  color: $accent
+.menu-btn
+  position: relative
+  display: none
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) 
+
+  .links
+    height: 100vh
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 10
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    transition: top 1s ease
+    display: none
+    li
+      display: block
+      list-style: none
+
+  .menu-btn
+    display: inline-block
+    position: absolute
+    right: 20px
+    z-index: 100000
+      
+
+::ng-deep.mat-menu-panel.menu 
+  max-width: none !important
+  width: 99.9vw !important
+
+::ng-deep.mat-menu-item.btn
+  text-align: center

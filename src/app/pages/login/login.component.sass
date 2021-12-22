@@ -1,0 +1,41 @@
+@import "../../../colors"
+
+.wrapper
+  height: 90vh
+  columns: 2
+  column-gap: 10rem
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #f8b407
+  background: linear-gradient(6deg, #ffb7002a 0%, rgba(187,187,187,0) 60%)
+  .login-container
+    position: absolute
+    top: 15rem
+    .mat-title
+      margin-top: 1.5rem
+    width: 300px
+    color: $white-ish
+    text-align: center
+    background: #292929
+    border-radius: 4%
+    box-shadow: 0 2px 4px 0 rgba(73, 73, 73, 0.2),0 6px 20px 0 rgba(82, 82, 82, 0.19)
+    .input
+      margin: 3rem 0
+      button 
+        color: $black-ish
+        margin: 1rem
+        width: 65%
+        background: $accent
+
+
+::ng-deep .mat-form-field 
+  .mat-input-element 
+    color: $black-input
+
+  .mat-form-field-label 
+    color: $black-input
+    
+  .mat-form-field-outline 
+    background: #ffffff10
+    border-radius: 5px

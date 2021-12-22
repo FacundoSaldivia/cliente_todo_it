@@ -1,0 +1,62 @@
+@import "../../../colors"
+.wrapper 
+  margin-top: 4rem
+  columns: 2
+  column-gap: 10rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .request-container
+    width: 800px
+    max-width: 80vw
+    text-align: center
+    background: #292929
+    border-radius: 4%
+    box-shadow: 0 2px 4px 0 rgba(73, 73, 73, 0.2),0 6px 20px 0 rgba(82, 82, 82, 0.19)
+
+    .mat-card-title
+      color: $accent
+      margin: 2rem 0 3rem 0
+    .form-request
+      .input
+        width: 70%
+      display: grid
+      grid-template-columns: 1fr 1fr
+      .falla
+        grid-column: 1 / -1
+        .text-area
+          width: 84%
+      .button
+        grid-column: 1/ -1
+        border: 0px solid #313131
+        width: 100%
+        margin: 2rem 0
+        button
+          width: 80%
+          color: $black-ish
+          background: $accent
+
+
+
+::ng-deep .mat-form-field 
+  .mat-input-element 
+    color: $white-ish
+
+  .mat-form-field-label 
+    color: $white-ish
+    
+  .mat-form-field-outline 
+    background: #ffffff10
+    border-radius: 5px
+  .mat-form-field-placeholder
+    color: $white-ish
+@media screen and (max-width: 1024px) 
+  .wrapper 
+    margin-top: 2rem
+    padding-bottom: 2rem
+    .request-container
+      .form-request
+        grid-template-columns: 1fr
+        .mat-form-field 
+          width: 80%

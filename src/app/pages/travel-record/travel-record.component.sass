@@ -1,0 +1,87 @@
+@import "../../../colors"
+.wrapper 
+  margin-top: 9rem
+  columns: 2
+  column-gap: 10rem
+  display: flex
+  align-items: center
+  justify-content: center
+  .title
+    position: absolute
+    top: 7rem
+    font-family: serat
+    font-size: 200%
+    color: $accent
+
+table
+  width: 80vw
+.mat-form-field 
+  font-size: 14px
+  width: 100%
+.mat-table
+  box-shadow: none
+  background: #747474
+.tabla
+  background: #747474
+  border-radius: 2%
+  padding: 20px
+.tabla2
+  display: none  
+  background: #747474 
+  border-radius: 2%
+  padding: 20px
+@media screen and (max-width: 1024px) 
+
+  tr.example-detail-row 
+    height: 0
+  
+
+  tr.example-element-row:not(.example-expanded-row):hover 
+    background: whitesmoke
+  
+
+  tr.example-element-row:not(.example-expanded-row):active 
+    background: #efefef
+  
+
+  .example-element-row td 
+    border-bottom-width: 0
+  
+
+  .example-element-detail 
+    overflow: hidden
+    display: flex
+  
+
+  .example-element-diagram 
+    min-width: 80px
+    border: 2px solid black
+    padding: 8px
+    font-weight: lighter
+    margin: 8px 0
+    height: 104px
+  
+
+  .example-element-symbol 
+    font-weight: bold
+    font-size: 40px
+    line-height: normal
+  
+
+  .example-element-description 
+    padding: 16px
+  
+
+  .example-element-description-attribution 
+    opacity: 0.5
+  
+  .tabla2
+    display: block
+  .tabla
+    display: none
+  table
+    width: 80vw
+.mat-cell 
+  padding: 0 !important
+  margin: 2px !important
+

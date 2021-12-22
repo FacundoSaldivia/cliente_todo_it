@@ -1,0 +1,65 @@
+<mat-toolbar class="tool-bar">
+        <button [routerLink]="['/home']" class=title-home>TODO IT</button>
+        <span class="example-spacer"></span>
+
+
+        <ul class="links">
+                <!--MainMenu-->
+                <li><button mat-stroked-button class="btn" [routerLink]="['/home']">Home</button></li>
+                <li><button *ngIf="!getLocalData()" mat-stroked-button class="btn" [routerLink]="['/register']">Sign
+                                Up</button>
+                </li>
+
+                <li><button *ngIf="!getLocalData()" mat-stroked-button class="btn"
+                                [routerLink]="['/login']">Login</button>
+                </li>
+
+                <li><button *ngIf="getLocalData()" mat-stroked-button class="btn"
+                                [routerLink]="['/travel-request']">Solicitar
+                                Viaje</button></li>
+
+                <li><button *ngIf="getLocalData()" mat-stroked-button class="btn"
+                                [routerLink]="['/travel-state']">Estado de
+                                viaje</button></li>
+
+                <li><button *ngIf="getLocalData()" mat-stroked-button class="btn"
+                                [routerLink]="['/travel-record']">Historial</button>
+                </li>
+                <li><button *ngIf="getLocalData()" (click)='deleteLocalData()' mat-stroked-button class="btn">Cerrar
+                                Sesion</button>
+                </li>
+        </ul>
+
+        <button class="menu-btn" (click)="rotate()" mat-icon-button [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu">
+                <mat-icon id="hamburger">dehaze</mat-icon>
+
+        </button>
+        <mat-menu class="menu" #menu="matMenu">
+                <button (click)="rotate()" mat-menu-item class="btn" [routerLink]="['/home']">
+                        Home
+                </button>
+                <button (click)="rotate()" *ngIf="!getLocalData()" mat-menu-item class="btn"
+                        [routerLink]="['/register']">Sign Up
+                </button>
+
+                <button (click)="rotate()" *ngIf="!getLocalData()" mat-menu-item class="btn" [routerLink]="['/login']">
+                        Login
+                </button>
+
+                <button (click)="rotate()" *ngIf="getLocalData()" mat-menu-item class="btn"
+                        [routerLink]="['/travel-request']">
+                        Solicitar
+                        Viaje
+                </button>
+                <button (click)="rotate()" *ngIf="getLocalData()" mat-menu-item class="btn"
+                        [routerLink]="['/travel-state']">Estado de
+                        viaje</button>
+                <button (click)="rotate()" *ngIf="getLocalData()" mat-menu-item class="btn"
+                        [routerLink]="['/travel-record']">Historial</button>
+
+                <button (click)="rotate()" (click)='deleteLocalData()' *ngIf="getLocalData()" mat-menu-item class="btn"
+                        [routerLink]="['/travel-record']">Cerrar Sesion</button>
+        </mat-menu>
+
+</mat-toolbar>

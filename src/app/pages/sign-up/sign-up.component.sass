@@ -1,0 +1,75 @@
+@import "../../../colors"
+.register-form 
+  h1 
+    color: $white-ish
+    margin: 1em 0em
+    font-family: serat
+  padding-top: 1rem
+  width: 90vw
+  max-width: 400px
+  text-align: center
+  background: #292929
+
+  border-radius: 4%
+  box-shadow: 0 2px 4px 0 rgba(73, 73, 73, 0.2),0 6px 20px 0 rgba(82, 82, 82, 0.19)
+  
+
+  .register-btns 
+    border: 0px solid #313131
+    button 
+      color: $black-ish
+      margin: 1rem
+      width: 50%
+      background: $accent
+    
+    button:disabled 
+      opacity: 0.3
+    
+.wrapper 
+  margin-top: 5rem
+  columns: 2
+  column-gap: 10rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+.signup-text 
+  color: $white-ish
+  max-width: 500px
+  h1,
+  p 
+    font-family: serat
+    line-height: 200%
+  
+
+.higlight 
+  color: $accent
+
+@media screen and (max-width: 1024px) 
+
+  .signup-text 
+    display: none
+  
+  .wrapper 
+    columns: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 0rem
+    margin-left: 0rem
+    column-gap: 0rem
+  
+
+
+::ng-deep .mat-form-field 
+    .mat-input-element 
+      color: $white-ish
+
+    .mat-form-field-label 
+      color: $white-ish
+      
+    .mat-form-field-outline 
+      background: #ffffff10
+      border-radius: 5px
+    
+    
