@@ -8,7 +8,6 @@ import { TravelRecordComponent } from './travel-record/travel-record.component';
 import { TravelStateComponent } from './travel-state/travel-state.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { MaterialModule } from '../material.module';
-import { PopupComponent } from './login/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { PopupComponent } from './login/popup/popup.component';
     TravelRecordComponent,
     TravelStateComponent,
     UserHomeComponent,
-    PopupComponent,
   ],
   imports: [CommonModule, MaterialModule],
 })

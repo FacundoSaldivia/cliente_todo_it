@@ -61,4 +61,9 @@ export class LoginComponent implements OnInit {
   openSnackBar(message: string, duration: number) {
     this.snackBar.open(message, 'Ok', { duration: duration });
   }
+  loginButton(): void {
+    this.form.value.email = 'jz@email.com';
+    this.form.value.password = '123';
+    this.submit();
+  }
 }
